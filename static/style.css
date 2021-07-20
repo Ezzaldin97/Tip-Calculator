@@ -1,0 +1,257 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Dark grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (form inputs): 24px
+
+### Font
+
+- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+- Weights: 400, 500, 700
+
+*/
+
+
+:root{
+    /*colors*/
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+    --light-grayish-cyan-2: hsl(185, 41%, 84%);
+    --light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    /*font-family*/
+    --main-font: 'Space Mono', monospace;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--light-grayish-cyan-2);
+}
+
+img{
+    display: block;
+    margin: 3rem auto 1rem auto; 
+}
+
+#card-container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    font-family: var(--main-font);
+}
+
+#card-container #mangement{
+    margin-right: 3rem;
+}
+
+#card-container #mangement #mangement-form .label{
+    font-weight: 700;
+    color: var(--dark-grayish-cyan);
+    font-size: 13px;
+}
+
+#card-container #mangement #mangement-form #bill-input{
+    background-color: var(--light-grayish-cyan);
+    display: block;
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+    border-radius: 0.2rem;
+    border-width: 0;
+    outline: none;
+    font-weight: 700;
+    font-family: var(--main-font);
+    color: var(--dark-grayish-cyan);
+    width: 100%;
+    padding: 0.3rem;
+    text-align: end;
+}
+
+#card-container #mangement #mangement-form #bill-input:focus{
+    border: 0.15rem solid var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+#card-container #mangement #mangement-form #tip-selection{
+    display: grid;
+    grid-template-columns: 4rem 4rem 4rem;
+    grid-gap: 0.5rem 0.3rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+#card-container #mangement #mangement-form #tip-selection .tip-btn{
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-family: var(--main-font);
+    font-weight: 700;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    border-width: 0;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+#card-container #mangement #mangement-form #tip-selection #custom-tip{
+    border-radius: 0.2rem;
+    border-width: 0;
+    background-color: var(--light-grayish-cyan);
+    text-align: center;
+    outline: none;
+    font-weight: 700;
+    font-family: var(--main-font);
+    color: var(--dark-grayish-cyan); 
+}
+
+#card-container #mangement #mangement-form #tip-selection #custom-tip:focus{
+    border: 0.15rem solid var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+#card-container #mangement #mangement-form #tip-selection .tip-btn:hover{
+    background-color: var(--light-grayish-cyan-2);
+    color: var(--very-dark-cyan);
+}
+
+#card-container #mangement #mangement-form #tip-selection .tip-btn:focus{
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+#card-container #mangement #mangement-form #num-people-headers{
+    display: flex;
+}
+
+#card-container #mangement #mangement-form #num-people-headers #warn{
+    display: none;
+    color: hsl(0, 100%, 60%);
+    font-size: 12px;
+    margin-left: 1.5rem;
+    font-family: var(--main-font);
+    font-weight: 700;
+}
+
+#card-container #mangement #mangement-form #number-of-people{
+    background-color: var(--light-grayish-cyan);
+    display: block;
+    margin-top: 0.6rem;
+    border-radius: 0.2rem;
+    border-width: 0;
+    outline: none;
+    font-weight: 700;
+    font-family: var(--main-font);
+    color: var(--dark-grayish-cyan);
+    width: 100%;
+    padding: 0.3rem;
+    text-align: end;
+}
+
+#card-container #mangement #mangement-form #number-of-people:focus{
+    border: 0.15rem solid var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+#card-container #show-price{
+    background-color: var(--very-dark-cyan);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+}
+
+#card-container #show-price #show-detailed-price .sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.34rem;
+}
+
+#card-container #show-price #show-detailed-price .sec .left{
+    color: var(--white);
+    margin-right: 2rem;
+}
+
+#card-container #show-price #show-detailed-price .sec .left h6{
+    font-weight: 400;
+    color: var(--dark-grayish-cyan-2);
+}
+
+#card-container #show-price #show-detailed-price .sec .right{
+    color: var(--strong-cyan);
+}
+
+#card-container #show-price #reset-btn #btn{
+    font-family: var(--main-font);
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--strong-cyan);
+    width: 100%;
+    padding: 0.3rem;
+    margin-top: 2.6rem;
+    outline: none;
+    border-width: 0;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+#card-container #show-price #reset-btn #btn:hover{
+    background-color: var(--light-grayish-cyan-2);
+}
+
+@media (max-width: 500px){
+    #card-container{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        top: 0;
+        left:0;
+        transform: translate(0, 0);
+        width: 80%;
+        margin: 5rem auto 5rem auto;
+    }
+
+    #card-container #mangement{
+        margin: 0 0 2rem 0;
+    }
+
+    #card-container #mangement #mangement-form #tip-selection{
+        grid-template-columns: 50% 50%;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
+    <link rel='stylesheet' href='./static/style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    
+    <img src='./static/images/logo.svg' alt='logo'>
+    <div id='card-container'>
+      <div id='mangement'>
+        <form id='mangement-form'>
+          <label id='bill-label' class='label' for='bill-input'>Bill</label>
+          <input id='bill-input' type='text' placeholder='0' value=''>
+          
+          <label id='tip-label' class='label' for='tip-selection'>Select Tip %</label>
+          <div id='tip-selection'>
+            <button class='tip-btn' id='btn-5' value='0.05'>5%</button>
+            <button class='tip-btn' id='btn-10' value='0.1'>10%</button>
+            <button class='tip-btn' id='btn-15' value='0.15'>15%</button>
+            <button class='tip-btn' id='btn-25' value='0.25'>25%</button>
+            <button class='tip-btn' id='btn-50' value='0.5'>50%</button>
+            <input id='custom-tip' type='text' placeholder='Custom'>
+          </div>
+          
+          <div id='num-people-headers'>
+            <label id='people' class='label' for='number-of-people'>Number of People</label>
+            <p id='warn'>can't be zero</p>
+          </div>
+          <input id='number-of-people' type='text' placeholder='0' value=''>
+        </form>
+      </div>
+      <div id='show-price'>
+        <div id='show-detailed-price'>
+          <div id='tip-amount' class='sec'>
+            <div class='left'>
+              <h5>Tip Amount</h5>
+              <h6>/ person</h6>
+            </div>
+            <div class='right'>
+              <h1 id='tip-amount-value'>$0.00</h1>
+            </div>
+          </div>
+          <div id='total' class='sec'>
+            <div class='left'>
+              <h5>Total</h5>
+              <h6>/ person</h6>
+            </div>
+            <div class='right'>
+              <h1 id='total-amount-value'>$0.00</h1>
+            </div>
+          </div>
+        </div>
+        <div id='reset-btn'>
+          <button id='btn' disabled>Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src='js/bill-show.js'></script>
+  </body>
+</html>
