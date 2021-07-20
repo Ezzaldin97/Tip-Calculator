@@ -21,8 +21,8 @@ const clacTips= (tip)=>{
     let bill= Number(billInput.value);
     let numPeopleValue= Math.round(Number(numPeople.value,2));
     let tipAmountValue=Math.round(Number(bill*tip),2);
-    let amount= (bill+tipAmountValue)/numPeopleValue;
-    tipAmount.innerHTML=`$${tipAmountValue / numPeopleValue}`;
+    let amount= Math.round((bill+tipAmountValue)/numPeopleValue);
+    tipAmount.innerHTML=`$${Math.round(tipAmountValue / numPeopleValue)}`;
     totalAmount.innerHTML=`$${amount}`;
 };
 
